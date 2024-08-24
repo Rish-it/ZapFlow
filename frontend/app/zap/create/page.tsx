@@ -28,7 +28,7 @@ function useAvailableActionsAndTriggers() {
     }
 }
 
-export default function() {
+export default function MyComponent() {
     const router = useRouter();
     const { availableActions, availableTriggers } = useAvailableActionsAndTriggers();
     const [selectedTrigger, setSelectedTrigger] = useState<{
