@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { BACKEND_URL, HOOKS_URL } from "../config";
 import { LinkButton } from "@/components/buttons/LinkButton";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 
 interface Zap {
     id: string;
@@ -104,9 +105,9 @@ function ZapTable({ zaps }: { zaps: Zap[] }) {
             {zaps.map(z => (
                 <div key={z.id} className="flex border-b border-t py-4">
                     <div className="flex-1 flex">
-                        <img src={z.trigger.type.image} className="w-[30px] h-[30px]" alt={`Trigger image for ${z.id}`} />
+                        <Image src={z.trigger.type.image} width={30} height={30} alt={`Trigger image for ${z.id}`} />
                         {z.actions.map(x => (
-                            <img key={x.id} src={x.type.image} className="w-[30px] h-[30px]" alt={`Action image for ${x.id}`} />
+                            <Image key={x.id} src={x.type.image} width={30} height={30} alt={`Action image for ${x.id}`} />
                         ))}
                     </div>
                     <div className="flex-1">{z.id}</div>
