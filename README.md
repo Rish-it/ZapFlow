@@ -1,8 +1,8 @@
 
-# AutomateIQ
+# ZapFlow
 
-AutomateIQ is a cutting-edge automation platform designed to streamline workflows, improve efficiency, and enhance productivity. Built with a modern tech stack, AutomateIQ provides a powerful backend and a seamless frontend experience for handling complex automation tasks.
-- **Deployed Link**: https://automateiq.vercel.app
+ZapFlow is a cutting-edge automation platform designed to streamline workflows, improve efficiency, and enhance productivity. Built with a modern tech stack, ZapFlow provides a powerful backend and a seamless frontend experience for handling complex automation tasks.
+- **Deployed Link**: https://ZapFlow.vercel.app
 ## Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -35,7 +35,7 @@ AutomateIQ is a cutting-edge automation platform designed to streamline workflow
 - **TypeScript**: Strongly typed programming language that builds on JavaScript.
 
 ## Getting Started
-Follow these steps to get AutomateIQ up and running on your local machine.
+Follow these steps to get ZapFlow up and running on your local machine.
 
 ### Prerequisites
 - **Node.js**: Version 14.x or higher.
@@ -46,8 +46,8 @@ Follow these steps to get AutomateIQ up and running on your local machine.
 
 1. **Clone the Repository**
     \`\`\`bash
-    git clone https://github.com/Rish-it/AutomateIQ.git
-    cd AutomateIQ
+    git clone https://github.com/Rish-it/ZapFlow.git
+    cd ZapFlow
     \`\`\`
 
 2. **Set Up Environment Variables**
@@ -85,7 +85,7 @@ Follow these steps to get AutomateIQ up and running on your local machine.
     \`\`\`
  
 ## Configuration
-AutomateIQ is highly configurable via environment variables and configuration files.
+ZapFlow is highly configurable via environment variables and configuration files.
 
 ### Environment Variables
 - **JWT_SECRET**: Secret key for JWT.
@@ -106,4 +106,4 @@ For questions, suggestions, or contributions, feel free to reach out:
 
 ---
 
-*AutomateIQ - Automating the Future.*
+*ZapFlow - Automating the Future.*
