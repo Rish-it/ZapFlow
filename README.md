@@ -2,7 +2,8 @@
 # ZapFlow
 
 ZapFlow is a cutting-edge automation platform designed to streamline workflows, improve efficiency, and enhance productivity. Built with a modern tech stack, ZapFlow provides a powerful backend and a seamless frontend experience for handling complex automation tasks.
-- **Deployed Link**:
+- **Test Credentials **:- email:test@gmai.com
+                          pass:test123
 ## Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
