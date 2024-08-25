@@ -9,7 +9,7 @@ ZapFlow is a cutting-edge automation platform designed to streamline workflows, 
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
-- [Configuration](#configuration)
+- [Screenshots](#Screenshots)
 - [Contact](#contact)
 
 ## Features
@@ -46,56 +46,49 @@ Follow these steps to get ZapFlow up and running on your local machine.
 ### Installation
 
 1. **Clone the Repository**
-    \`\`\`bash
+2. 
     git clone https://github.com/Rish-it/ZapFlow.git
     cd ZapFlow
-    \`\`\`
-
-2. **Set Up Environment Variables**
+   
+3. **Set Up Environment Variables**
+4. 
     - Create a \`.env\` file in the root directory.
     - Add the necessary environment variables as per the \`.env.example\` file.
 
-3. **Install Backend Dependencies**
-    \`\`\`bash
+5. **Install Backend Dependencies**
+6. 
     cd backend
     npm install
-    \`\`\`
 
-4. **Install Frontend Dependencies**
-    \`\`\`bash
+7. **Install Frontend Dependencies**
+    
     cd ../frontend
     npm install
-    \`\`\`
 
-5. **Start Docker Containers**
+8. **Start Docker Containers**
     - Make sure Docker is running and execute:
-    \`\`\`bash
-    docker-compose up -d
-    \`\`\`
-
-6. **Run the Backend**
-    \`\`\`bash
+    
+    docker-compose up -d 
+   
+9. **Run the Backend**
+ 
     cd backend
     npm start
-    \`\`\`
-
-7. **Run the Frontend**
-    \`\`\`bash
+   
+10. **Run the Frontend**
     cd ../frontend
     npm run dev
-    \`\`\`
  
-## Configuration
-ZapFlow is highly configurable via environment variables and configuration files.
+## Screenshots
 
-### Environment Variables
-- **JWT_SECRET**: Secret key for JWT.
-- **DATABASE_URL**: Connection string for the Postgres database.
-- **KAFKA_BROKER**: Kafka broker URL.
-- **PORT**: Port number on which the backend server runs.
 
-### Docker Configuration
-Docker Compose is used to manage containers for the backend, Postgres, and Kafka. The configuration can be found in the \`docker-compose.yml\` file.
+![image](https://github.com/user-attachments/assets/c2598f7b-0420-4f41-bbe3-65f65883d64f)
+
+![image](https://github.com/user-attachments/assets/0b843525-eb44-4587-9f94-af7d6f1aa9cc)
+
+
+![image](https://github.com/user-attachments/assets/6e29c28f-6688-4b16-b89c-06c73486de62)
+
 
 
 ## Contact
