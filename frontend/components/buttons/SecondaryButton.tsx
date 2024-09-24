@@ -26,7 +26,7 @@ export const SecondaryButton = ({ children, onClick, size = "small", className =
     return (
         <div 
             onClick={onClick} 
-            className={`${size === "small" ? "text-sm px-8 pt-2" : "text-xl px-10 py-4"} cursor-pointer hover:shadow-md border text-black border-black rounded-full text-center flex justify-center flex-col ${className}`}
+            className={`${size === "small" ? "text-sm px-8 pt-2" : "text-xl px-10 py-4"} cursor-pointer hover:shadow-md border bg-white text-black border-black rounded-full text-center flex justify-center flex-col ${className}`}
         >
             {children}
         </div>

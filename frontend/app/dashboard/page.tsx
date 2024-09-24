@@ -8,6 +8,7 @@ import { LinkButton } from "@/components/buttons/LinkButton";
 import { useRouter } from "next/navigation";
 import Image from 'next/image';
 
+
 interface Zap {
     id: string;
     triggerId: string;
@@ -90,6 +91,8 @@ export default function MyComponent() {
     );
 }
 
+// 
+
 function ZapTable({ zaps }: { zaps: Zap[] }) {
     const router = useRouter();
 
@@ -104,14 +107,27 @@ function ZapTable({ zaps }: { zaps: Zap[] }) {
             </div>
             {zaps.map(z => (
                 <div key={z.id} className="flex border-b border-t py-4">
-                    <div className="flex-1 flex">
-                        <Image src={z.trigger.type.image} width={30} height={30} alt={`Trigger image for ${z.id}`} />
+                    <div className="flex-1 flex items-center">
+                        <Image 
+                            src={z.trigger.type.image} 
+                            width={30} 
+                            height={30} 
+                            alt={`Trigger image for ${z.id}`}
+                            className="mr-2"  // Add margin-right for spacing
+                        />
                         {z.actions.map(x => (
-                            <Image key={x.id} src={x.type.image} width={30} height={30} alt={`Action image for ${x.id}`} />
+                            <Image 
+                                key={x.id} 
+                                src={x.type.image} 
+                                width={30} 
+                                height={30} 
+                                alt={`Action image for ${x.id}`} 
+                                className="ml-2"  // Add margin-left for spacing
+                            />
                         ))}
                     </div>
                     <div className="flex-1">{z.id}</div>
-                    <div className="flex-1">Nov 13, 2023</div>
+                    <div className="flex-1">Jan 13, 2024</div>
                     <div className="flex-1">{`${HOOKS_URL}/hooks/catch/1/${z.id}`}</div>
                     <div className="flex-1">
                         <LinkButton onClick={() => {
