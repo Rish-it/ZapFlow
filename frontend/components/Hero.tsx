@@ -33,16 +33,16 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative pt-8 pb-20 md:pt-12 md:pb-24 bg-black overflow-hidden">
+    <section className="relative pt-6 sm:pt-8 pb-12 sm:pb-16 md:pt-12 md:pb-24 bg-black overflow-hidden">
       <GridPattern />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 items-center">
           {/* Hero Content */}
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 opacity-0 animate-slide-up animate-delay-100">
+          <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 opacity-0 animate-slide-up animate-delay-100">
               Integrate your stack <span className="gradient-text">→</span> automate your work
             </h1>
-            <p className="text-xl text-white/80 mb-8 max-w-xl opacity-0 animate-slide-up animate-delay-200">
+            <p className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 max-w-xl opacity-0 animate-slide-up animate-delay-200">
               Evolve at the speed and scale of your business with the leader in no-code automation.
               Pairing AI and ZapFlow helps you turn ideas into workflows.
             </p>
@@ -57,11 +57,11 @@ export const Hero = () => {
               </Button>
             </div>
 
-            {/* Trusted by logos */}
-            <div className="mt-12 opacity-0 animate-fade-in animate-delay-500">
+            {/* Trusted by logos - only visible on small screens and above */}
+            <div className="mt-10 sm:mt-12 opacity-0 animate-fade-in animate-delay-500">
               <p className="text-sm text-white/60 mb-4">Working with the best</p>
-              <div className="flex flex-wrap gap-8 items-center opacity-70">
-                <div className="h-8 w-20 relative grayscale hover:grayscale-0 transition-all duration-300 hover-lift">
+              <div className="flex flex-wrap gap-6 sm:gap-8 items-center justify-center lg:justify-start opacity-70">
+                <div className="h-6 sm:h-8 w-16 sm:w-20 relative grayscale hover:grayscale-0 transition-all duration-300 hover-lift">
                   <Image
                     src="/images/icons/spotify.png"
                     alt="Spotify"
@@ -69,7 +69,7 @@ export const Hero = () => {
                     style={{ objectFit: "contain" }}
                   />
                 </div>
-                <div className="h-8 w-24 relative grayscale hover:grayscale-0 transition-all duration-300 hover-lift">
+                <div className="h-6 sm:h-8 w-16 sm:w-20 relative grayscale hover:grayscale-0 transition-all duration-300 hover-lift">
                   <Image
                     src="/images/icons/walmart.png"
                     alt="Walmart"
@@ -77,7 +77,7 @@ export const Hero = () => {
                     style={{ objectFit: "contain" }}
                   />
                 </div>
-                <div className="h-8 w-20 relative grayscale hover:grayscale-0 transition-all duration-300 hover-lift">
+                <div className="h-6 sm:h-8 w-16 sm:w-20 relative grayscale hover:grayscale-0 transition-all duration-300 hover-lift">
                   <Image
                     src="/images/icons/canon.png"
                     alt="Canon"
@@ -89,23 +89,23 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Hero Visualization */}
-          <div className="relative h-[450px] md:h-[500px] hidden lg:block opacity-0 animate-fade-in animate-delay-400">
+          {/* Hero Visualization - hidden on mobile, visible on sm and up */}
+          <div className="relative h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] hidden sm:block opacity-0 animate-fade-in animate-delay-400 mx-auto">
             <div className="w-full h-full flex items-center justify-center animate-float">
               {/* Integration Flow Diagram with ZapFlow in the center */}
               <div className="relative w-full h-full flex items-center justify-center">
                 {/* App icons arranged in a circle */}
-                <div className="absolute w-[320px] h-[320px] rounded-full border-2 border-white/10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center before:content-[''] before:absolute before:w-[350px] before:h-[350px] before:rounded-full before:border before:border-violet-500/20 before:animate-pulse">
+                <div className="absolute w-[250px] h-[250px] sm:w-[280px] sm:h-[280px] md:w-[300px] md:h-[300px] lg:w-[320px] lg:h-[320px] rounded-full border-2 border-white/10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center before:content-[''] before:absolute before:w-[270px] before:h-[270px] sm:before:w-[300px] sm:before:h-[300px] md:before:w-[330px] md:before:h-[330px] lg:before:w-[350px] lg:before:h-[350px] before:rounded-full before:border before:border-violet-500/20 before:animate-pulse">
                   {/* Rotating outer rings */}
-                  <div className="absolute w-[380px] h-[380px] rounded-full border border-violet-500/10 animate-slow-spin"></div>
-                  <div className="absolute w-[400px] h-[400px] rounded-full border border-blue-500/10 animate-slow-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
+                  <div className="absolute w-[290px] h-[290px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] lg:w-[380px] lg:h-[380px] rounded-full border border-violet-500/10 animate-slow-spin"></div>
+                  <div className="absolute w-[310px] h-[310px] sm:w-[340px] sm:h-[340px] md:w-[370px] md:h-[370px] lg:w-[400px] lg:h-[400px] rounded-full border border-blue-500/10 animate-slow-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
                   
                   {/* Central ZapFlow logo */}
                   <div 
-                    className="relative z-30 bg-gradient-to-r from-blue-500 to-violet-600 p-9 rounded-full shadow-[0_0_30px_rgba(139,92,246,0.5)] glow-effect border-4 border-white/10 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(139,92,246,0.7)]"
+                    className="relative z-30 bg-gradient-to-r from-blue-500 to-violet-600 p-6 sm:p-7 md:p-8 lg:p-9 rounded-full shadow-[0_0_30px_rgba(139,92,246,0.5)] glow-effect border-4 border-white/10 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(139,92,246,0.7)]"
                     onClick={() => setIsActive(!isActive)}
                   >
-                    <div className="text-2xl md:text-3xl font-extrabold text-center text-white relative">
+                    <div className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-extrabold text-center text-white relative">
                       ZapFlow
                       <span className={`absolute -top-1 -right-1 w-2 h-2 rounded-full ${isActive ? 'bg-green-500' : 'bg-gray-500'} transition-colors duration-300`}></span>
                     </div>
@@ -126,31 +126,32 @@ export const Hero = () => {
                             }}
                           >
                             <div 
-                              className="w-[130px] h-[2px] bg-gradient-to-r from-violet-500/90 to-transparent animate-pulse"
+                              className="w-[90px] sm:w-[100px] md:w-[115px] lg:w-[130px] h-[2px] bg-gradient-to-r from-violet-500/90 to-transparent animate-pulse"
                               style={{ animationDelay: `${index * 0.1}s` }}
                             />
                             
                             {/* Mini icon on the line */}
                             <div 
-                              className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/70 rounded-full p-2 border border-violet-500/50 shadow-[0_0_10px_rgba(124,58,237,0.5)]"
+                              className={`absolute left-1/2 transform bg-black/70 rounded-full p-1.5 sm:p-1.5 md:p-2 lg:p-2 border border-violet-500/50 shadow-[0_0_10px_rgba(124,58,237,0.5)] 
+                                translate-x-[40px] sm:translate-x-[45px] md:translate-x-[55px] lg:translate-x-[60px] -translate-y-1/2`}
                               style={{ 
-                                transform: `translateX(60px) translateY(-50%) rotate(-${angle}deg)`,
+                                transform: `rotate(-${angle}deg)`,
                                 animationDelay: `${index * 0.1 + 0.2}s`
                               }}
                             >
-                              <div className="relative w-9 h-9">
+                              <div className="relative w-7 sm:w-7 md:w-8 lg:w-9 h-7 sm:h-7 md:h-8 lg:h-9">
                                 {APP_ICONS[index].isSvg ? (
                                   index === 5 ? (
                                     // GitHub icon
-                                    <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center">
-                                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-black">
+                                    <div className="w-7 sm:w-7 md:w-8 lg:w-9 h-7 sm:h-7 md:h-8 lg:h-9 bg-white rounded-full flex items-center justify-center">
+                                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 sm:w-5 md:w-6 lg:w-7 h-5 sm:h-5 md:h-6 lg:h-7 text-black">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                       </svg>
                                     </div>
                                   ) : (
                                     // Google Drive icon
-                                    <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center">
-                                      <svg viewBox="0 0 87.3 78" className="w-6 h-6">
+                                    <div className="w-7 sm:w-7 md:w-8 lg:w-9 h-7 sm:h-7 md:h-8 lg:h-9 bg-white rounded-full flex items-center justify-center">
+                                      <svg viewBox="0 0 87.3 78" className="w-5 sm:w-5 md:w-6 lg:w-7 h-5 sm:h-5 md:h-6 lg:h-7">
                                         <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
                                         <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
                                         <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
@@ -212,7 +213,7 @@ export const Hero = () => {
                         }}
                       >
                         <div className="integration-icon">
-                          <div className={`relative w-16 h-16 rounded-full shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] ${(app.isSvg && app.angle === 270) ? "flex items-center justify-center bg-white p-1" : ""} ${(app.isSvg && app.angle === 225) ? "bg-white p-2" : ""}`}>
+                          <div className={`relative w-12 sm:w-14 md:w-16 lg:w-16 h-12 sm:h-14 md:h-16 lg:h-16 rounded-full shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 hover:scale-110 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] ${(app.isSvg && app.angle === 270) ? "flex items-center justify-center bg-white p-1" : ""} ${(app.isSvg && app.angle === 225) ? "bg-white p-2" : ""}`}>
                             {app.isSvg ? (
                               app.angle === 225 ? (
                                 <svg viewBox="0 0 24 24" fill="currentColor" className="text-black">
