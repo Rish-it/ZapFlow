@@ -17,14 +17,16 @@
 
 import { Appbar } from "@/components/Appbar";
 import { Hero } from "@/components/Hero";
-import { HeroVideo } from "@/components/HeroVideo";
+import { Features } from "@/components/Features";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="pb-0">
+    <main className="min-h-screen">
       <Appbar />
       <Hero />
-      <HeroVideo />
-    </div>
+      <Features />
+      <Footer />
+    </main>
   );
 }

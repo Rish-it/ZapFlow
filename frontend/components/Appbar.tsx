@@ -1,42 +1,43 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { LinkButton } from "./buttons/LinkButton";
-import { PrimaryButton } from "./buttons/PrimaryButton";
+import { Button } from "@/components/ui/button";
+import { GridPattern } from "@/components/ui/grid-pattern";
 
 export const Appbar = () => {
   const router = useRouter();
   return (
-    <div className="relative flex border-b-0 justify-between items-center p-4 dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-      {/* Radial Gradient */}
-      <div className="absolute pointer-events-none inset-0 dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-
+    <div className="relative flex justify-between items-center p-4 bg-black border-b border-white/10">
+      <GridPattern />
+      
       {/* ZapFlow Title */}
-      <div className="relative z-10 flex flex-col justify-center text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+      <div 
+        className="relative z-10 flex flex-col justify-center text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-600 cursor-pointer hover:scale-105 transition-transform"
+        onClick={() => router.push("/")}
+      >
         ZapFlow
       </div>
 
       {/* Buttons */}
-      <div className="relative z-10 flex">
-        <div className="pr-4">
-          <LinkButton onClick={() => {}}>Contact Sales</LinkButton>
-        </div>
-        <div className="pr-4">
-          <LinkButton
-            onClick={() => {
-              router.push("/login");
-            }}
-          >
-            Login
-          </LinkButton>
-        </div>
-        <PrimaryButton
+      <div className="relative z-10 flex space-x-4">
+        <Button 
+          variant="ghost" 
+          onClick={() => {
+            router.push("/login");
+          }}
+          className="text-white/70 hover:text-white"
+        >
+          Login
+        </Button>
+        <Button 
+          variant="gradient" 
           onClick={() => {
             router.push("/signup");
           }}
+          className="button-gradient-hover"
         >
           Signup
-        </PrimaryButton>
+        </Button>
       </div>
     </div>
   );
